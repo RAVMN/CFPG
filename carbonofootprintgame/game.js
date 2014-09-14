@@ -1,15 +1,47 @@
 function functionOne() { alert('You clicked the top text'); }
 function functionTwo() { alert('You clicked the bottom text'); }
 
+//var kmrecorridos = 0;
+
 function calcular(){
-var vehiculo = document.getElementById("transporte").value; //Que medio usa
-var kmdiario = document.getElementById("KMDIA").value;
+kmrecorridos = document.getElementById("KMDIA").value;
+var c = document.getElementById("transporte").value; //Que medio usa
+
+/*var kmdiario = document.getElementById("KMDIA").value;
 document.getElementById("resultado1").innerHTML = "Recorriste " + kmdiario + " km";
 document.getElementById("resultado2").innerHTML = "La emisión por KM aproximada es de " + vehiculo
 var emisiontotal = kmdiario * vehiculo * 365;
 document.getElementById("resultado3").innerHTML = "Tu emisión anual proyectada es de " + emisiontotal;
 
-return emisiontotal;
+*/
+var emisiontotal = (c*kmrecorridos*0.001+0.74).toFixed(2)
+document.getElementById("resultado1").innerHTML = "Requieres " + emisiontotal + " planetas";
+
+
+
+
+if(emisiontotal < 1) {
+document.body.style.backgroundImage="url('bueno.jpg')";}
+else if (emisiontotal < 3) {
+document.body.style.backgroundImage="url('medio.jpg')";}
+else {
+document.body.style.backgroundImage="url('malo.jpg')";}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+
+
 
 if(emisiontotal < 200000) {
 document.body.style.backgroundImage="url('blue.png')";}
@@ -21,7 +53,7 @@ document.body.style.backgroundImage="url('grey.png')"}
 
 function tirardato(){
 document.getElementById("resultado3").innerHTML = "Tu emisión anual proyectada es de " + emisiontotal;
-}
+}*/
 
 var lat1
 var lon1
