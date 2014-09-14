@@ -9,6 +9,8 @@
     </head>
     <body>
     	<h1>Carbono Footprint Game test</h1>
+
+<div id="FirstTime" style="display:block">
 <h2>Calcula  tu huella por uso de vehículos</h2>
 <select id="transporte">
 <option value="160">Bencina pequeño <1.4 (5L/KM)</option>
@@ -24,36 +26,39 @@
 <br>KM recorridos este día: <input size="8" maxlength="9" placeholder="Ej: 43" type="text" id="KMDIA" >km<br>
 <button onclick="calcular();">Calcular huella</button>
 <br><br>
+	<button onclick="empezarjuego();">Visitar personaje</button>
+
+</div>
+
+<div id="GameTime" style="display:none">
+<h2>Hazme feliz</h2>
 <p id="resultado1">Escribe arriba cuantos KM recorriste: </p>
 <p id="resultado2">Escoge arriba un transporte</p>
 <p id="resultado3">Aprieta Calcular huella para saber</p>
- 
- <h2>Calcula distancia recorrida</h2>
-
-<div id="posicioninicial" style="display:block">
-<button onclick="getPosition();">Grabar punto de partida</button></div>
-
-<div id="posicionfinal" style="display:none">
-<button onclick="getPosition2();">Grabar punto de termino</button>
-	<div data-rol='content' id='posicioninicialguardada'></div>
+<p>Playing</p>
+<div data-rol='content' id='mascota'></div>
+	<button onclick="tirardato();">Tirar dato</button>
 </div>
+
+<div id="UpdateTime" style="display:none">
+<h2>Calcula distancia recorrida</h2>
+<div id="posicioninicial" style="display:block"><button onclick="getPosition();">Grabar punto de partida</button></div>
+<div id="posicionfinal" style="display:none"><button onclick="getPosition2();">Grabar punto de termino</button><div data-rol='content' id='posicioninicialguardada'></div></div>
 
 <div id="recorridototal" style="display:none">
-			<div data-rol='content' id='dynamicdata1' class='dynamic'></div>
-			<div data-rol='content' id='dynamicdata2' class='dynamic'></div>
-
-	<div data-rol='content' id='posicionfinalguardada'></div>
+	<div data-rol='content' id='dynamicdata1' class='dynamic'></div><div data-rol='content' id='dynamicdata2' class='dynamic'></div>
+	<div data-rol='content' id='posicionfinalguardada'></div></div>
+	<button onclick="regresarjuego();">Visitar personaje</button>
 </div>
 
-<!--
-<button onclick="distanciarara();">Calcular</button> Distancia recorrida directa
+
+<!--<button onclick="distanciarara();">Calcular</button> Distancia recorrida directa
 			<div data-rol='content' id='dynamicdata3' ></div>
 
 		<p><button onclick="geoFindMe()">Show my location</button></p>
 <div id="out"></div>
 
-Traducirlo en una reducción del valor inicial
--->
+Traducirlo en una reducción del valor inicial-->
 
 </body>
 </html>

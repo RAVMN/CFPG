@@ -9,12 +9,18 @@ document.getElementById("resultado2").innerHTML = "La emisión por KM aproximada
 var emisiontotal = kmdiario * vehiculo * 365;
 document.getElementById("resultado3").innerHTML = "Tu emisión anual proyectada es de " + emisiontotal;
 
+return emisiontotal;
+
 if(emisiontotal < 200000) {
 document.body.style.backgroundImage="url('blue.png')";}
 else if (emisiontotal > 1000000) {
 document.body.style.backgroundImage="url('red.png')";}
 else {
 document.body.style.backgroundImage="url('grey.png')"}
+}
+
+function tirardato(){
+document.getElementById("resultado3").innerHTML = "Tu emisión anual proyectada es de " + emisiontotal;
 }
 
 var lat1
@@ -94,3 +100,13 @@ function getPosition2(){
 
   navigator.geolocation.getCurrentPosition(success, error);
 }*/
+
+
+	function empezarjuego(){
+GameTime.style.display = 'block';
+FirstTime.style.display = 'none';
+}
+function regresarjuego(){
+GameTime.style.display = 'block';
+UpdateTime.style.display = 'none';
+}
