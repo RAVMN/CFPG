@@ -8,8 +8,11 @@
        	<script type="text/javascript" src="game.js"></script>
     </head>
     <body>
-    	<h1>Carbono Footprint Game test</h1>
-
+        <section class="skin" role="region">
+        <header>
+            <h1>Carbono Footprint Game</h1>
+        </header>
+    </section>
 <div id="FirstTime" style="display:block">
 <h2>Calcula  tu huella por uso de vehículos</h2>
 <select id="transporte">
@@ -26,15 +29,15 @@
 <br>KM recorridos este día: <input size="8" maxlength="9" placeholder="Ej: 43" type="text" id="KMDIA" >km<br>
 <button onclick="calcular();">Calcular huella</button>
 <br><br>
+<p id="resultado1">Escribe arriba cuantos KM recorriste: </p>
+<p id="resultado2">Escoge arriba un transporte</p>
+<p id="resultado3">Aprieta Calcular huella para saber</p>
 	<button onclick="empezarjuego();">Visitar personaje</button>
 
 </div>
 
 <div id="GameTime" style="display:none">
 <h2>Hazme feliz</h2>
-<p id="resultado1">Escribe arriba cuantos KM recorriste: </p>
-<p id="resultado2">Escoge arriba un transporte</p>
-<p id="resultado3">Aprieta Calcular huella para saber</p>
 <p>Playing</p>
 <div data-rol='content' id='mascota'></div>
 	<button onclick="tirardato();">Tirar dato</button>
@@ -59,6 +62,13 @@
 <div id="out"></div>
 
 Traducirlo en una reducción del valor inicial-->
+
+    <footer>
+        <div role="toolbar">
+                <ul><li><button class="info" onclick='changeInfo()'>Info</button></li></ul>
+        </div>
+                <!-- Fin de la Toolbar -->
+    </footer>
 
 </body>
 </html>
